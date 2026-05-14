@@ -1,0 +1,38 @@
+# ── Database & uploads ──
+backend/certverify.db
+backend/uploads/
+
+# ── ML model weights (too large for git) ──
+backend/ml/model.pt
+backend/ml/model_cert.pt
+backend/ml/*.pt
+
+# ── Environment & secrets ──
+.env
+*.pem
+
+# ── Python cache ──
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ── Credentials ──
+frontend/kaggle.json
+kaggle.json
+
+# ── Node ──
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── Build artifacts ──
+dist/
+*.zip
+
+# ── OS files ──
+.DS_Store
+Thumbs.db
+
+# ── Contract build cache ──
+contracts/CertRegistry_abi.json

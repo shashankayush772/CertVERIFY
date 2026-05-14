@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["python311", "poppler_utils"]
+
+[phases.install]
+cmds = [
+  "pip install --upgrade pip",
+  "pip install -r requirements-deploy.txt"
+]
+
+[start]
+cmd = "python backend/download_model.py && python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT"

@@ -1,0 +1,1 @@
+web: pip install -r requirements-deploy.txt -q && python backend/download_model.py && python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT
